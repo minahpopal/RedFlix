@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+  background-image: url('https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_1280.jpg');
+  
+}
+
+
+ h1 {
+  color: red;
+  font-family: serif;
+  padding:15px;
+  background: black;
+  background-clip: padding-box;
+  font-size: 300%;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+
+  h2 {
+  color: red;
+  width: 210px;
+  padding: 0.1px;
+  background:black;
+  border: 0.1px solid gray;
+  margin: 0;
+  align:left;
+  position:relative;
+  left:1100px;
+
+}
+  
+  
+.navbar {
+  overflow: hidden;
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.select-css {
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.0;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 20%;
+	box-sizing: border-box;
+	margin: 0;
+    position:relative;
+    left:1100px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+	display: none;
+}
+.select-css:hover {
+	border-color: #888;
+}
+.select-css:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.select-css option {
+	font-weight:normal;
+}
+  
+table, th, td {
+  border: 8px solid white;
+}
+</style>
+</head>     
+
+<body>
+
+<div class="header">
+  <h1 align="center">Redflix</h1>
+  
+</div>
+  
+
+  
+  
+<div class="navbar">
+  <a href="#home">Home</a>
+  </div>
+
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+
+  <select class="select-css" id="list2" onchange="getSelectValue();">
+    <option value="0">Select Service</option>
+    <option value="1">Netflix</option>
+    <option value="2">Hulu</option>
+    <option value="3">Amazon Prime</option>
+    <option value="4">ESPN</option>
+    <option value="5">Sling</option>
+    <option value="6">Disney+</option>
+    <option value="7">Fubu</option>
+  </select>
+</div>
+  
+
+<p>
+<p>
+  
+
+	<select class="select-css" id="list" onchange="getSelectValue();">
+    <option value="0">Select Genre:</option>
+    <option value="1">Action</option>
+    <option value="2">Comedy</option>
+    <option value="3">Sci-Fic</option>
+    <option value="4">Romance</option>
+    <option value="5">Sports</option>
+    <option value="6">News</option>
+    <option value="7">Documentary</option>
+    <option value="8">Western</option>
+    <option value="9">Thriller</option>
+  </select>
+  
+
+
+  
+ 
+    
+<table style="width:1%">
+ 
+  <tr>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+  </tr>
+  <tr>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+    <tr>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+    <td><img src="http://rs902.pbsrc.com/albums/ac222/jvac/pattern-background.png~c200"></td>
+  </tr>
+ 
+  </tr>
+
+  <h2 id="demo" align=center></h2>
+  <h2 id="demo1" align=center></h2>
+  <h2 id="demo2" align=center></h2>
+  <h2 id="demo3" align=center></h2>
+  <h2 id="demo4" align=center></h2>
+  <h2 id="demo5" align=center></h2>
+  
+
+
+  
+
+
+
+
+<script>
+
+  
+  function getSelectValue() {
+      document.getElementById("list").value;
+      
+      
+      if(list.value=="1"){
+document.getElementById("demo").innerHTML = "Avengers";
+document.getElementById("demo1").innerHTML = "Iron Man";
+document.getElementById("demo2").innerHTML = "Extraction";
+document.getElementById("demo3").innerHTML = "Bloodshot";
+document.getElementById("demo4").innerHTML = "Bad Boys";
+document.getElementById("demo5").innerHTML = "6 Underground";
+      }
+      else if(list.value=="2"){
+document.getElementById("demo").innerHTML="Gamenight";
+document.getElementById("demo1").innerHTML = "Blockers";
+document.getElementById("demo2").innerHTML = "Goodboys";
+document.getElementById("demo3").innerHTML = "Hangover";
+document.getElementById("demo4").innerHTML = "";
+document.getElementById("demo5").innerHTML = "";        
+      }
+      
+      else if (list.value=="5"){
+document.getElementById("demo").innerHTML="Football";
+document.getElementById("demo1").innerHTML = "BasketBall";
+document.getElementById("demo2").innerHTML = "Soccer";
+document.getElementById("demo3").innerHTML = "Baseball";
+document.getElementById("demo4").innerHTML = "Cricket";
+document.getElementById("demo3").innerHTML = "Volleyball";        
+
+      }
+      
+    }
+  
+  
+</script>
+
+</body>
+</html>
