@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#808B96;
+  
+}
+
+
+ h1 {
+  color: darkred;
+  font-family: serif;
+  font-size: 300%;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #808B96;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/*service button*/
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.navbar a:hover,.dropdown1:hover .dropbtn1, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+
+
+div.desc {
+  padding: 1px;
+  text-align: center;
+}
+
+
+
+
+
+
+</style>
+
+
+<script type="text/javascript">
+      function picture() {
+        var pic = "background.jpg"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+        document.getElementById('bigpic').style.display = 'block';
+
+      }
+
+    </script>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div class="header">
+  <h1 align="center">Redflix</h1>
+  
+</div>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  
+  
+ <div class="dropdown" style="float:right;">
+  <button class="dropbtn">Catagorie
+    <i class="fa fa-caret-down"></i>
+    </button>
+  <div class="dropdown-content">
+  <a href="#">Action</a>
+  <a href="#">Sports</a>
+  <a href="#">Comedy</a>
+  <a href="#">Romance</a>
+  <a href="#">Sci-Fic</a>
+  <a href="#">Documentary</a>
+  </div>
+</div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Service
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Youtube</a>
+      <a href="#">Hulu</a>
+      <a href="#">Netflix</a>
+      <img style="display:none;" id="bigpic" src="bigpic" />
+      <div onclick="picture()"><a href="#">Disney+</a>
+      <a href="#">Amazon Prime</a>
+     
+   
+    </div>
+  </div> 
+  </div>
+</div>
+
+<p>
+<div class="gallery">
+  <a target="_blank" href="black.jpg">
+    <img src="black.jpg" alt="1st box" width="200" height="100">
+  </a>
+  <div class="desc"></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="black.jpg">
+    <img src="black.jpg" alt="2nd box" width="200" height="100">
+  </a>
+  <div class="desc"></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="black.jpg">
+    <img src="black.jpg" alt="3rd box" width="200" height="100">
+  </a>
+  <div class="desc"></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="black.jpg">
+    <img src="black.jpg" alt="4th box" width="200" height="100">
+  </a>
+  <div class="desc"></div>
+</div>
+</p>
+
+
+
+</body>
+</html>
