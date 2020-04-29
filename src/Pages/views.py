@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 from django.http import HttpResponse
@@ -13,3 +14,4 @@ def selection_view(request ,*args, **kwargs):
  		##return HttpResponse("<H1> This is Home Page for Netflix </H1>")
 
  		return render(request, "Selection.html" , {})
+
