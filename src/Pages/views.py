@@ -7,3 +7,9 @@ def home_view(request ,*args, **kwargs):
  		##return HttpResponse("<H1> This is Home Page for Netflix </H1>")
 
  		return render(request, "home.html" , {})
+
+
+def selection_view(request ,*args, **kwargs):
+ 		##return HttpResponse("<H1> This is Home Page for Netflix </H1>")
+
+ 		return render(request, "Selection.html" , {})
