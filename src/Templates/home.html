@@ -1,198 +1,480 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+<!-- You will not be able to see this text. -->
+
 <html>
-<title>W3.CSS Template</title>
+<title>Redflix</title>
+  
 <meta charset="UTF-8">
+  
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  
+  
+  
+<!-- This is where our CSS code exists -->
 <style>
-body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-.menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1557245419-a727f9b57615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
-  min-height: 150%;
-   background-blend-mode: lighten;
+  
+  
+  body{
+    height: 180%
+  }
+  html{
+    height: 90%
+  }
+
+  .register{
+    border-spacing: 50px;
+    border-color:red;
+    text-align:center;
+    padding: 260px;
+    background-color: coral;
+  }
+  
+  .login{
+    border-spacing: 50px;
+    border-color:red;
+    text-align:center;
+    padding: 300px;
+    background-color: coral;
+  }
+  
+  .footer{
+    color: red;
+    background-color: black;
+    padding: 160px;
+    font-size: 28px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: right;
+  }
+  
+  .color(
+    background-color: #333;
+    padding: 1600px;
+
+  )
+  
+  body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Lucida Console", Courier, monospace;
+  }
+
+  
+  
+  .menu {
+    display: none
+  }
+
+  
+  
+  /*To change parts of the background page do so here */ 
+  .bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1557245419-a727f9b57615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
+    min-height: 150%;
+    filter: brightness(120%);
+  }
+  
+  
+  
+  
+  
+  
+  /* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  
+  
 }
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+ 
+  
+  div.otherServices{
+    font-size: 15px;
+  }  
+  
+  
 </style>
-<body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-hide-small">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
-    <a href="#myMap" class="w3-bar-item w3-button">LOGIN</a>
-    <a href="#myMap" class="w3-bar-item w3-button">PROFILE</a>
-    <a href="#myMap" class="w3-bar-item w3-button">ENTER PLATFORM</a>
-
-  </div>
-</div>
   
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-padding">
-    <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
-  </div>
-  <div class="w3-display-middle w3-center">
-    <span class="w3-text-white w3-hide-small" style="font-size:100px"><br>REDflix</span>
-    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
-    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
-  </div>
-</header>
-
-<!-- Menu Container -->
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
-  <div class="w3-content">
   
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
-      </a>
-    </div>
-
-    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
-      <hr>
-   
-      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
-      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
-      <hr>
-      
-      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
-      <hr>
-
-      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
-      <hr>
-
-      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
-      <hr>
-
-      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
-    </div>
-
-    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
-      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
-      <hr>
-   
-      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
-      <p class="w3-text-grey">Ravioli filled with cheese</p>
-      <hr>
-      
-      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
-      <hr>
-
-      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
-      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
-    </div>
-
-
-    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
-      <p class="w3-text-grey">Ask the waiter</p>
-      <hr>
-   
-      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
-      <hr>
-      
-      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
-      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
-      <hr>
-      
-      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
-      <p class="w3-text-grey">Tomatoes and mozzarella</p>
-    </div><br>
-
-  </div>
-</div>
-
-<!-- About Container -->
-<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-    <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
-    <p>We are proud of our interiors.</p>
-    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
-    <h1><b>Opening Hours</b></h1>
-    
-    <div class="w3-row">
-      <div class="w3-col s6">
-        <p>Mon & Tue CLOSED</p>
-        <p>Wednesday 10.00 - 24.00</p>
-        <p>Thursday 10:00 - 24:00</p>
-      </div>
-      <div class="w3-col s6">
-        <p>Friday 10:00 - 12:00</p>
-        <p>Saturday 10:00 - 23:00</p>
-        <p>Sunday Closed</p>
-      </div>
-    </div>
-    
-  </div>
-</div>
-
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
-
-<!-- Contact -->
-<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
-    <p>Find us at some address at some place or call us at 05050515-122330</p>
-    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
-    </form>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
+  
+  
+  
+  
+  
+ <!-- This is where our JavaScipt code exists --> 
 <script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-red";
   }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  document.getElementById("myLink").click();
+  
+  
+  
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
   }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
 }
-document.getElementById("myLink").click();
 </script>
 
+  
+  
+  
+  
+  
+  
+  
+<body>
+
+  
+    <div  id="navbar">
+      
+      <a href="#">HOME</a>
+      
+      <a href="#menu">PLANS</a>
+      
+      <a href="#about">ABOUT</a>
+      
+      <a href="#contact">CONTACT</a>
+      
+      <a href="#login">LOGIN</a>
+      
+      <a href="#register">REGISTER</a>
+      
+
+    </div>
+ 
+
+  
+  
+  
+    
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-padding">
+    </div>
+    <div class="w3-display-topleft">
+      <span class="w3-text-red w3-serif" style="font-size:100px">
+        <br>REDflix
+      </span>
+      <p>
+        <a href="#menu" class="w3-button w3-small w3-red">Let me see the PLANS</a>
+      </p>
+    </div>
+  </header>
+
+
+  
+  
+  
+    <!-- Login Portion -->
+  <div class="login" id="login">
+    
+      <h1 style="margin-bottom:64px">Login</h1>
+      <p> <strong>To login</strong> please enter your email and password</p>
+  
+      <form action="/action_page.php" target="_blank">
+        <p>
+          <input  type="text" placeholder="Email" required name="Email">
+        </p>
+        <p>
+          <input  type="text" placeholder="Password" required name="Password">
+        </p>
+        <p>
+          <button type="submit">ENTER PLATFORM</button>
+        </p>
+      </form>
+   
+  </div>
+  
+  
+  
+  <!-- Menu Container -->
+  <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">PLANS</h1>
+      <div class="w3-row w3-center w3-border w3-border-dark-grey">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Red Package</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Scarlet Package</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Crimson Package</div>
+        </a>
+      </div>
+      
+      
+      
+      <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+        <h1>
+          <b style="color:red">Red Package</b>
+          
+          <span style="color:red">$19.99</span>
+          
+        </h1>
+        
+        <div class="otherServices">
+        
+          <p style="color:black">Youtube Premium costs <b>$11.99 per month</b></p>
+        
+          <p style="color:black">Amazon Prime costs <b>$12.99 per month</b></p>
+        
+          <p style="color:black">ESPN costs <b>$4.99 per month</b></p>
+          
+          </div>
+        
+        <hr>
+        
+        <p style="color:black">There price $29.97 </b></p>
+        
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      <!-- This is the menu option for the Scarlet page -->
+      <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+        <h1>
+          <b style="color:red">Scarlet Package</b>
+          
+          <span style="color:red">$39.99</span>
+          
+        </h1>
+        
+        <div class="otherServices">
+          
+          <p style="color:black">Youtube Premium costs <b>$11.99 per month</b></p>
+        
+          <p style="color:black">Amazon Prime costs <b>$12.99 per month</b></p>
+            
+          <p style="color:black">Hulu Premium + Live TV costs <b>$60.99 per month</b></p>
+        
+          <p style="color:black">Disney Plus costs <b>$6.99 per month</b></p>
+        
+          <p style="color:black">Fubu costs <b>$54.99 per month</b></p>
+          
+          </div>
+
+          <hr>
+        
+        <p style="color:black">There price $147.95 </b></p>
+
+      </div>
+      
+      
+      
+      
+      <!-- This is the menu option for the crimson page -->
+      <div id="Starter"class="w3-container menu w3-padding-32 w3-white">
+        <h1>
+          <b style="color:red">Crimson Package</b>
+          
+          <span style="color:red">Our price: $79.95</span>
+          
+        </h1>
+        
+        <div class="otherServices">
+          
+          <p style="color:black">Youtube Premium costs <b>$11.99 per month</b></p>
+        
+          <p style="color:black">Hulu Premium + Live TV costs <b>$60.99 per month</b></p>
+        
+          <p style="color:black">Amazon Prime costs <b>$12.99 per month</b></p>
+        
+          <p style="color:black">Sling Orange + Sling Blue costs <b>$45 per month</b></p>
+        
+          <p style="color:black">Disney Plus costs <b>$6.99 per month</b></p>
+        
+          <p style="color:black">ESPN costs <b>$4.99 per month</b></p>
+        
+          <p style="color:black">Netflix Premium costs <b>$15.99 per month</b></p>
+        
+          <p style="color:black">AT&T TV costs <b>$49.99 per month</b></p>
+        
+          <p style="color:black">Fubu costs <b>$54.99 per month</b></p>
+        
+          <p style="color:black">Apple TV costs <b>$4.99 per month</b></p>
+          
+        </div>  
+
+        <hr>
+        
+        <p style="color:black">There price $269.99 </b></p>
+        
+      </div>
+      
+      <br>
+      
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  
+  <!-- Image of something nice -->
+  <img src="https://images.unsplash.com/photo-1577109081426-103f2198f29e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"  style="width:100%;">
+  
+  
+  
+  
+  
+  
+  
+  <!-- About Container -->
+  <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+      <p>The consumption of media via video streaming services is higher than ever. Oftentimes, consumers who may watch multiple video media or platforms at once, have to change between multiple screens or browser windows. Redflix is a multimedia platform which will allow consumers to watch multiple video streaming services at once, on a single screen, to alleviate the need to switch between screens or windows. We allow you to catch all your entertainment needs on a single screen. Our service allows you to access all the live events including sports, award shows, live tv and other apps like Youtube, Twitch, Netflix. Once you select all your choices, click on the full screen mode to enter our beautiful streaming service with numerous screens and automated to switch sizes when the event is close to an end. We hope this service allows users to never miss their favorite shows, sports and other entertainment services</p>
+      
+      <p>We are proud of our interiors.</p>
+      <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+
+    </div>
+  </div>
+  
+  
+  
+  
+    <!-- Contact Container -->
+  <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="contact">
+    
+    <div class="w3-content">
+      
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+      
+      <p>If you have any questions or concerns please contact us at this number. Our customer support is always at the ready to help you whene</p>
+      <br>
+      <p>1 800 584 923</p>
+
+      <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" style="width:100%" class="w3-margin-top w3-margin-bottom">
+
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+  <!-- Image of something nice -->
+  <img src="https://images.unsplash.com/photo-1475691058852-37b5d9b6a878?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"  style="width:100%;">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Registration Portion -->
+  <div class="register" id="register">
+    
+      <h1 style="margin-bottom:64px">Registration</h1>
+      <p> <strong>To regiester</strong> for our service please fill out the information below</p>
+  
+      <form action="/action_page.php" target="_blank">
+        <p>
+          <input  type="text" placeholder="Full Name" required name="Full Name">
+        </p>
+        <p>
+          <input  type="text" placeholder="Email" required name="Email">
+        </p>
+        <p>
+          <input  type="text" placeholder="Credit Card" required name="Credit Card">
+        </p>
+         <p>
+          <input  type="text" placeholder="Password" required name="Password">
+        </p>
+        <p>
+          <input type="text" placeholder="Your suggestions to imporve our website " required name="Message">
+        </p>
+        <p>
+          <input  type="text" placeholder="Phone Number" required name="Phone Number">
+        </p>
+        <p>
+          <button type="submit">GIVE ME MY SUBSCIPTION</button>
+        </p>
+      </form>
+   
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  <!-- This will be the last thing that the user sees -->
+  <footer class= "footer">
+    
+    <p>Created by Students from the University of Texas at Dallas</p>
+    
+  </footer>
+
 </body>
+
 </html>
