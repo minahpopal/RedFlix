@@ -4,8 +4,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   
+.image-holder {
+    float: left;
+    width: 60%;
+    vertical-align: middle;
+}
+
+.image-holder img {
+    vertical-align: bottom;
+    display: inline-block;
+    width: auto;
+    max-width: 60%;
+    height: auto;
+}
+
+.image-holder:before {
+    content: '';
+    display: inline-block;
+    height: 50%;
+    vertical-align: middle;
+    margin-right: -.25em;
+}
+
 img.resize1 {
-  width:600px;
+  width:300px;
   height:400px;
   position:relative;
   left:380px;
@@ -51,12 +73,23 @@ img.resize3 {
 
 <body>
 
-<img class="resize1" src="https://i.ibb.co/wC5wp3N/image1.png" >
-<img class="resize2" src="https://i.ibb.co/0cQGLq6/image2.png" >
-<img class="resize3" src="https://i.ibb.co/VvN2mTx/image3.png" >
+<table border=0 cellpadding="0" cellspacing="0">
 
-<img class="resize4" src="https://i.ibb.co/4WDSp5k/image4.png" >
-<img class="resize5" src="https://i.ibb.co/xLmpfqq/image5.png" >
+    <tr>
+      <td><img src="https://i.ibb.co/wC5wp3N/image1.png" width=350px height="350px"></td>
+      <td><img src="https://i.ibb.co/0cQGLq6/image2.png" width=750px height=400px></td>
+      <td><img src="https://i.ibb.co/VvN2mTx/image3.png" width=350px height=350px></td>
+    </tr>
+
+    <tr>
+      <td><img src="https://i.ibb.co/4WDSp5k/image4.png" width="350px" height="250px"></td>
+      <td><img src="https://i.ibb.co/xLmpfqq/image5.png" width="750px" height="300px"></td>
+      <td></td>
+    </tr>
+
+</table>
+
+
 
 
 </body>
