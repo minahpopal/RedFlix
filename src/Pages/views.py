@@ -15,3 +15,8 @@ def selection_view(request ,*args, **kwargs):
 
  		return render(request, "Selection.html" , {})
 
+
+def main_view(request,*args,**kwargs):
+
+
+		return render(request, "Main.html", {})
