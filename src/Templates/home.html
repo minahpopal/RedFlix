@@ -135,6 +135,29 @@
   
  <!-- This is where our JavaScipt code exists --> 
 <script>
+
+var attempt = 3;
+function validate(){
+var username = document.getElementById("Email").value;
+var password = document.getElementById("Password").value;
+if ( username == "Jeff" && password == "1234"){
+alert ("Login successfully");
+window.location = "http://127.0.0.1:8000/Selection.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("Email").disabled = true;
+document.getElementById("Password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+          }
+    }
+}
+
   // Tabbed Menu
   function openMenu(evt, menuName) {
     var i, x, tablinks;
@@ -228,15 +251,15 @@ function myFunction() {
       <h1 style="margin-bottom:64px">Login</h1>
       <p> <strong>To login</strong> please enter your email and password</p>
   
-      <form action="/action_page.php" target="_blank">
+      <form action="http://127.0.0.1:8000/selection" target="_self" name="loginform" >
         <p>
           <input  type="text" placeholder="Email" required name="Email">
         </p>
         <p>
-          <input  type="text" placeholder="Password" required name="Password">
+          <input  type="password" placeholder="Password" required name="Password">
         </p>
         <p>
-          <button type="submit">ENTER PLATFORM</button>
+          <a href="http://127.0.0.1:8000/selection"><input type="button" value="Enter Platform" onclick="validate()"/></a>
         </p>
       </form>
    
